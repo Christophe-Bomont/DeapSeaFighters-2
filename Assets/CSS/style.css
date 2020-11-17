@@ -1,0 +1,407 @@
+body
+{
+    margin: 0;
+    user-select: none; /* supported by Chrome and Opera /
+       -webkit-user-select: none; / Safari /
+       -khtml-user-select: none; / Konqueror HTML /
+       -moz-user-select: none; / Firefox /
+       -ms-user-select: none; / Internet Explorer/Edge */  
+       
+       /* permet d'éviter le ctrl-A et le "surlignage" des élements  */
+  
+}
+
+#mainContainer
+{
+    background-image: url(../IMG/BackGround_DT_P2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+#logoDesktop
+{
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+    display: block;
+    margin: auto;
+    height: 180px;
+   
+}
+#logoMobile
+{
+    display: none;
+}
+#imgTour
+{
+    grid-column: 10;
+    grid-row: 1 ;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    height: 90px;
+}
+
+#imgPlayer
+{
+    grid-column: 11;
+    grid-row: 1 ;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    height: 90px;
+ 
+}
+
+#imgLeviathan
+{
+    grid-column: 12;
+    grid-row: 1 ;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    height: 90px;
+ 
+}
+#poulpe
+{
+    grid-column: 4 / 6;
+    grid-row: 6 / 9 ;
+    display: block;
+    margin: auto;
+    height: 220px;
+    z-index: 2;
+    -webkit-animation: mover 2s infinite alternate;
+    animation: mover 4s infinite alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+#homard
+{
+    grid-column: 6 / 8;
+    grid-row: 6 / 8 ;
+    display: block;
+    margin: auto;
+    height: 220px;
+    z-index: 2;-webkit-animation: mover 3s infinite alternate;
+    animation: mover 3s infinite alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+#murene
+{
+    grid-column: 8 / 10;
+    grid-row: 6 / 9 ;
+    display: block;
+    margin: auto;
+    height: 220px;
+    z-index: 2;
+    -webkit-animation: mover 2s infinite alternate;
+    animation: mover 2s infinite alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+#reset
+{
+    grid-column: 12;
+    grid-row: 7 ;
+    display: block;
+    margin: auto;
+    height: 110px;
+}
+
+#droppable
+{ 
+    grid-column: 7 / 9;
+    grid-row: 4 / 6 ;
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    /* border: 2px solid white; */
+    border-radius: 50%;
+    visibility: hidden;
+
+ }
+#leviathanChoiceHiddenImg
+{
+    grid-column: 5 / 7;
+    grid-row: 4 / 6 ;
+    display: block;
+    margin: auto;
+    height: 200px;
+}
+#result
+{
+    grid-column: 5 / 9;
+    grid-row: 3 ;
+    display: block;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Alfa Slab One', cursive;
+    margin-bottom: -10px;
+}
+#round
+{
+    grid-column: 10;
+    grid-row: 1 ;
+    margin: auto;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Alfa Slab One', cursive;
+}
+#victory
+{
+    grid-column: 11;
+    grid-row: 1 ;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Alfa Slab One', cursive;
+}
+#defeat
+{
+    grid-column: 12;
+    grid-row: 1 ;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Alfa Slab One', cursive;
+}
+#endGame
+{
+    display: none;
+    grid-column: 4 / 10;
+    grid-row: 2 / 8;
+    margin: auto;
+    height: 450px;
+    z-index: 3;
+}
+#textEndGame{
+    
+    grid-column: 6 / 8;
+    grid-row: 5 / 7;
+    margin: auto;
+    font-family: 'Alfa Slab One', cursive;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    height: 450px;
+    z-index: 4;
+    
+}
+/* #sound
+{
+    grid-column: 1;
+    grid-row: 8 ;
+    display: block;
+    margin: auto;
+} */
+
+@media screen and (max-width: 375px)
+{
+    
+    #mainContainer
+    {
+        background-image: url(../IMG/BackGround_Mobile.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+    }
+
+    #logoDesktop
+    {
+        display: none;
+    
+    }
+    #logoMobile
+    {
+        
+        grid-column: 2 / 12;
+        grid-row: 1 ;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        height: 80px;
+    
+    }
+    #imgTour
+    {
+        grid-column: 12 / 13;
+        grid-row: 3 / 5 ;
+        display: block;
+        margin: auto;
+        padding-top: 10px;
+        height: 90px;
+    }
+
+    #imgPlayer
+    {
+        grid-column: 12 / 13;
+        grid-row: 5 / 7 ;
+        display: block;
+        margin: auto;
+        padding-top: 10px;
+        height: 90px;
+    
+    }
+
+    #imgLeviathan
+    {
+        grid-column: 12 / 13;
+        grid-row: 7 / 9 ;
+        display: block;
+        margin: auto;
+        padding-top: 10px;
+        height: 90px;
+    
+    }
+    #poulpe
+    {
+        grid-column: 1 / 5;
+        grid-row: 13 / 17;
+        display: block;
+        margin: auto;
+        height: 120px;
+    }
+
+    #homard
+    {
+        grid-column: 6 / 9;
+        grid-row: 13 / 17;
+        display: block;
+        margin: auto;
+        height: 120px;
+    
+    }
+
+    #murene
+    {
+        grid-column: 10 / 13;
+        grid-row: 13 / 17;
+        display: block;
+        margin: auto;
+        padding-left: 20px;
+        height: 120px;
+    
+    }
+
+    #reset
+    {
+        grid-column: 1 / 4;
+        grid-row: 3 / 5 ;
+        display: block;
+        margin: auto;
+        height: 90px;
+    }
+
+    #droppable
+    { 
+        grid-column: 6 / 10;
+        grid-row: 10 / 12 ;
+        display: block;
+        margin: auto;
+        height: 120px;
+        width: 120px;
+        /* border: 2px solid white; */
+        border-radius: 50%;
+        visibility: hidden;
+
+    }
+    #leviathanChoiceHiddenImg
+    {
+        grid-column: 6 / 10;
+        grid-row: 7 / 10 ;
+        display: block;
+        margin: auto;
+        height: 115px;
+    }
+    #result
+    {
+        grid-column: 6 / 10;
+        grid-row: 3 / 4 ;
+        display: block;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: ;
+    }
+    #round
+    {
+        grid-column: 12 / 13;
+        grid-row: 3 / 5 ;
+        margin: auto;
+        padding-top: 10px;
+        font-weight: bold;
+        font-size: 20px
+    }
+    #victory
+    {
+        grid-column: 12 / 13;
+        grid-row: 5 / 7 ;
+        display: block;
+        margin: auto;
+        padding-top: 10px;
+        font-weight: bold;
+        font-size: 20px
+    }
+    #defeat
+    {
+        grid-column: 12 / 13;
+        grid-row: 7 / 9 ;
+        display: block;
+        margin: auto;
+        padding-top: 10px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    #endGame
+    {
+        display: none;
+        grid-column: 3 / 12;
+        grid-row: 7 / 13;
+        margin: auto;
+        height: 225px;
+        z-index: 3;
+    }
+    #textEndGame{
+        
+        grid-column: 5 / 10;
+        grid-row: 10 / 12;
+        margin: auto;
+        font-family: 'Alfa Slab One', cursive;
+        text-align: center;
+        color: white;
+        font-size: 10px;
+        height: 225px;
+        z-index: 4;
+        
+    }
+
+}
